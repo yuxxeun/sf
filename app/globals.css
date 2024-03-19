@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global CSS file or within Loader component */
+@keyframes slideUp {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100%);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+
 body {
   background-color: #000;
 }
