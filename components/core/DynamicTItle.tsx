@@ -2,19 +2,20 @@ import { useEffect, useRef } from 'react';
 
 const TitleChangeOnTabChange = () => {
   const pageTitle = useRef<string | null>(null);
+  const originalTitle = useRef<string | null>(null);
   const attentionMessage = 'I Miss You 🥲';
   const isPageActive = useRef(true);
 
   useEffect(() => {
-    pageTitle.current = document.title;
+    originalTitle.current = document.title;
 
     const handleVisibilityChange = () => {
-      if (typeof document !== 'undefined' && document.hidden) {
+      if (document.visibilityState === 'hidden') {
         isPageActive.current = false;
         setTimeout(changeTitle, 2000);
       } else {
         isPageActive.current = true;
-        document.title = pageTitle.current || '';
+        document.title = originalTitle.current || '';
       }
     };
 
@@ -23,14 +24,13 @@ const TitleChangeOnTabChange = () => {
         document.title = attentionMessage;
       }
     };
-    
-    if (typeof document !== 'undefined') {
-      document.addEventListener('visibilitychange', handleVisibilityChange);
 
-      return () => {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-      };
-    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      document.title = originalTitle.current || '';
+    };
   }, []);
 
   return null;

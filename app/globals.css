@@ -16,6 +16,9 @@
   animation: slideUp 0.5s ease forwards;
 }
 
+:root {
+  cursor: crosshair;
+}
 
 body {
   background-color: #000;

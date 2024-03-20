@@ -1,9 +1,16 @@
+"use client"
+
+import Footer from "@/components/common/Footer";
 import GeoLocation from "@/components/common/Location";
+import MusicPlayer from "@/components/core/Music";
 
 const Home = () => {
   return (
     <>
-      <GeoLocation/>
+      <div className="text-center">
+          <MusicPlayer/>
+          <GeoLocation />
+      </div>
     </>
   );
 }
