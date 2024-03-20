@@ -1,8 +1,9 @@
 "use client"
 
-import Footer from "@/components/common/Footer";
 import GeoLocation from "@/components/common/Location";
+import Clock from "@/components/core/Clock";
 import MusicPlayer from "@/components/core/Music";
+import ScreenWidthDetector from "@/components/core/ScreenDetect";
 
 const Home = () => {
   return (
