@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 const svgToDataUri = require("mini-svg-data-uri");
 const colors = require("tailwindcss/colors");
+const { blackA, mauve, violet } = require('@radix-ui/colors');
 
 const {
   default: flattenColorPalette,
@@ -16,7 +17,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {}
+    extend: {
+      color: {
+        ...blackA,
+        ...mauve,
+        ...violet,
+      }
+    }
   },
   plugins: [
     addVariablesForColors,
