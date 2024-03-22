@@ -5,11 +5,11 @@ export interface baseData {
     github: string;
 }
 
-const defaultWebsiteData: baseData = {
+const baseData: baseData = {
     title: "SF",
     url: "https://sf.yuxxeun.tech",
     description: "Default description for the website.",
     github: "https://github.com/yuxxeun/sf.git"
 };
 
-export default defaultWebsiteData;
+export default baseData;

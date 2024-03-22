@@ -9,6 +9,13 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": [
+    "chrome 64",
+    "edge 79",
+    "firefox 67",
+    "opera 51",
+    "safari 12"
+  ],
   "dependencies": {
     "@bsmnt/scrollytelling": "^0.3.3",
     "@radix-ui/colors": "^3.0.0",
@@ -19,6 +26,7 @@
     "@studio-freight/react-lenis": "^0.0.46",
     "@types/canvas-confetti": "^1.6.4",
     "@vercel/analytics": "^1.2.2",
+    "browserslist": "^4.23.0",
     "canvas-confetti": "^1.9.2",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.14",

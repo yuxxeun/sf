@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import baseData from '@/data/base';
 import { Analytics } from '@vercel/analytics/react';
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
@@ -22,7 +23,7 @@ export default function RootLayout({
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="icon" href="./favicon.ico" />
-          <title>@yuxxeun — SF</title>
+          <title>{baseData.title}</title>
         </head>
           <body className={`${GeistSans.className} px-2 dark text-white mx-auto`}> 
             <TitleChangeOnTabChange/>
